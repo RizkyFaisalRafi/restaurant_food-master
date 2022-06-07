@@ -56,7 +56,10 @@ class NotificationHelper{
         android: androidPlatformChannelSpecifics
     );
 
-    var titleNotification = "<b>Daily Reminder</b>";
+    var randomIndex = Random().nextInt(restaurant.restaurants.length - 1);
+    var randomRestaurantName = restaurant.restaurants[randomIndex].name;
+
+    var titleNotification = "<b>$randomRestaurantName</b>";
     var titleRestaurant = "Ayo buka aplikasi restaurant sekarang";
     await flutterLocalNotificationsPlugin.show(
         0, titleNotification, titleRestaurant, platformChannelSpecifics,

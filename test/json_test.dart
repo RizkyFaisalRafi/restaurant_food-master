@@ -6,7 +6,7 @@ var dummyRestaurant = {
   "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. ...",
   "pictureId": "14",
   "city": "Medan",
-  "rating": 4.2
+  "rating": 4.20
 };
 
 void main() {
@@ -14,6 +14,6 @@ void main() {
     var restaurantResult = RestaurantList
         .fromJson(dummyRestaurant)
         .name;
-    expect("Melting Pot", restaurantResult);
+    expect(restaurantResult, "Melting Pot");
   });
 }
